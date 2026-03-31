@@ -71,6 +71,6 @@ RUN addgroup -S debug && adduser -S debug -G debug -s /bin/bash && \
 RUN cp /root/.bashrc /home/debug/.bashrc && \
     chown debug:debug /home/debug/.bashrc
 
-USER debug
+USER root
 
 CMD ["/bin/bash"]
