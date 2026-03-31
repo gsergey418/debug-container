@@ -33,8 +33,6 @@ RUN echo "export EDITOR=vim" >> /root/.bashrc && \
     echo "source /usr/share/bash-completion/bash_completion" >> /root/.bashrc
 
 # Create a non-root user for security if needed (default to root for debugging)
-# RUN addgroup -S debug && adduser -S debug -G debug
-
-WORKDIR /workspace
+RUN addgroup -S debug && adduser -S debug -G debug
 
 CMD ["/bin/bash"]
